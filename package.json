@@ -1,0 +1,11 @@
+{
+  "name": "cameron-bot",
+  "version": "0.0.1",
+  "description": "Stupid bot",
+  "main": "bot.js",
+  "author": "Evan Merz",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "mysql": "^2.18.1"
+  }
+}
