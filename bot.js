@@ -57,7 +57,7 @@ bot.on('message', ((user, userID, channelID, message, event) => {
         // which means that the value will be inserted into the ?
         let sql = "INSERT INTO `messages`(`message`) VALUES(?);";
         // replace any unknown letters with :joy: emoji
-        let txt = message.replace(/[^a-zA-z0-9!@#$%^&*()_+\-={}\[\]\\|~,./<>?;':" ]/g, ":joy:");
+        let txt = message.replace(/[^a-zA-Z0-9!@#$%^&*()_+\-={}\[\]\\|~,./<>?;':" ]/g, ":joy:");
         // Run the SQL query with the message as the value (replaces the '?' in the query)
         conn.query(sql, txt, (err, result) => {
             if (err) throw err;
@@ -111,7 +111,7 @@ rl.on('line', input => {
                         // if message author is cameron
                         if (message.author.id === '315308102628933634' && message.content !== '') {
                             let sql = "INSERT INTO `messages`(`message`) VALUES(?);";
-                            let txt = message.content.replace(/[^a-zA-z1-9!@#$%^&*()_+\-={}\[\]\\|~,./<>?;':" ]/g, ":joy:");
+                            let txt = message.content.replace(/[^a-zA-Z0-9!@#$%^&*()_+\-={}\[\]\\|~,./<>?;':" ]/g, ":joy:");
                             conn.query(sql, txt, (err, result) => {
                                 if (err) throw err;
                                 console.log(`"${txt}"`);
