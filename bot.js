@@ -1,4 +1,11 @@
 const discordIO = require('discord.io');
+// auth.json is not included for security reasons
+// this is the format of auth.json:
+/*
+{
+    "token": "DISCORD_AUTH_TOKEN"
+}
+ */
 const auth = require('./auth.json');
 const readline = require('readline');
 const mysql = require('mysql');
